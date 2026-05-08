@@ -1,0 +1,174 @@
+export default function MockShop() { const acc20k = Array.from({ length: 150 }, (, i) => ACC20K_${i + 1}); const acc50k = Array.from({ length: 150 }, (, i) => ACC50K_${i + 1}); const acc100k = Array.from({ length: 100 }, (_, i) => ACC100K_${i + 1});
+
+return ( <div className="min-h-screen bg-black text-white p-6 font-sans overflow-hidden"> <div className="animate-pulse text-center text-5xl font-black mb-8 text-yellow-400"> 🔥 BLOX FRUIT SHOP 🔥 </div>
+
+<div className="bg-zinc-900 rounded-3xl p-6 shadow-2xl border border-yellow-500">
+    <div className="grid md:grid-cols-2 gap-6">
+      <div>
+        <h2 className="text-3xl font-bold mb-4">🛒 Mua Acc</h2>
+
+        <div className="space-y-5">
+          <div className="bg-zinc-800 rounded-2xl p-4">
+            <div className="flex justify-between items-center mb-3">
+              <span className="font-bold text-xl">Acc Blox Fruit 20K</span>
+              <span className="bg-green-500 text-black px-3 py-1 rounded-full font-bold">
+                20.000đ
+              </span>
+            </div>
+
+            <div className="max-h-32 overflow-y-auto space-y-2">
+              {acc20k.slice(0, 15).map((acc) => (
+                <div key={acc} className="bg-zinc-700 rounded-xl p-2 text-sm">
+                  {acc}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-zinc-800 rounded-2xl p-4">
+            <div className="flex justify-between items-center mb-3">
+              <span className="font-bold text-xl">Acc Blox Fruit 50K</span>
+              <span className="bg-blue-500 px-3 py-1 rounded-full font-bold">
+                50.000đ
+              </span>
+            </div>
+
+            <div className="max-h-32 overflow-y-auto space-y-2">
+              {acc50k.slice(0, 15).map((acc) => (
+                <div key={acc} className="bg-zinc-700 rounded-xl p-2 text-sm">
+                  {acc}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-zinc-800 rounded-2xl p-4">
+            <div className="flex justify-between items-center mb-3">
+              <span className="font-bold text-xl">Acc Blox Fruit 100K</span>
+              <span className="bg-pink-500 px-3 py-1 rounded-full font-bold">
+                100.000đ
+              </span>
+            </div>
+
+            <div className="max-h-32 overflow-y-auto space-y-2">
+              {acc100k.slice(0, 15).map((acc) => (
+                <div key={acc} className="bg-zinc-700 rounded-xl p-2 text-sm">
+                  {acc}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-3xl font-bold mb-4">🎮 Cày Thuê</h2>
+
+        <div className="space-y-4">
+          <div className="bg-zinc-800 rounded-2xl p-4 flex justify-between">
+            <span>10M Beli</span>
+            <span>20.000đ</span>
+          </div>
+
+          <div className="bg-zinc-800 rounded-2xl p-4 flex justify-between">
+            <span>40M Beli</span>
+            <span>50.000đ</span>
+          </div>
+
+          <div className="bg-zinc-800 rounded-2xl p-4 flex justify-between">
+            <span>60M Beli</span>
+            <span>80.000đ</span>
+          </div>
+
+          <div className="bg-zinc-800 rounded-2xl p-4 flex justify-between">
+            <span>100M Beli</span>
+            <span>120.000đ</span>
+          </div>
+
+          <div className="bg-zinc-800 rounded-2xl p-4 space-y-3">
+            <input
+              placeholder="Nhập tài khoản"
+              className="w-full bg-zinc-700 rounded-xl p-3 outline-none"
+            />
+
+            <input
+              placeholder="Nhập mật khẩu"
+              type="password"
+              className="w-full bg-zinc-700 rounded-xl p-3 outline-none"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="mt-8 grid md:grid-cols-2 gap-6">
+    <div className="bg-zinc-900 rounded-3xl p-6 border border-cyan-500">
+      <h2 className="text-3xl font-bold mb-4">💳 Nạp Thẻ</h2>
+
+      <div className="space-y-4">
+        <div className="bg-zinc-800 rounded-2xl p-4">
+          <div className="font-bold mb-2">Viettel</div>
+          <div className="flex gap-2 flex-wrap">
+            <span className="bg-red-500 px-3 py-1 rounded-full">20K</span>
+            <span className="bg-red-500 px-3 py-1 rounded-full">50K</span>
+            <span className="bg-red-500 px-3 py-1 rounded-full">100K</span>
+          </div>
+        </div>
+
+        <div className="bg-zinc-800 rounded-2xl p-4">
+          <div className="font-bold mb-2">Mobi</div>
+          <div className="flex gap-2 flex-wrap">
+            <span className="bg-blue-500 px-3 py-1 rounded-full">20K</span>
+            <span className="bg-blue-500 px-3 py-1 rounded-full">50K</span>
+            <span className="bg-blue-500 px-3 py-1 rounded-full">100K</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-zinc-900 rounded-3xl p-6 border border-pink-500">
+      <h2 className="text-3xl font-bold mb-4">📜 Lịch Sử</h2>
+
+      <div className="space-y-3">
+        <div className="bg-zinc-800 rounded-2xl p-3 flex justify-between">
+          <span>Mua acc 50K</span>
+          <span className="text-yellow-400">Đang duyệt</span>
+        </div>
+
+        <div className="bg-zinc-800 rounded-2xl p-3 flex justify-between">
+          <span>Cày 40M beli</span>
+          <span className="text-green-400">Thành công</span>
+        </div>
+
+        <div className="bg-zinc-800 rounded-2xl p-3 flex justify-between">
+          <span>Nạp Viettel 100K</span>
+          <span className="text-cyan-400">Đã nhận</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="mt-8 bg-zinc-900 rounded-3xl p-6 border border-yellow-500 max-w-md mx-auto">
+    <h2 className="text-3xl font-bold mb-4 text-center">🔐 Đăng Nhập</h2>
+
+    <div className="space-y-3">
+      <input
+        placeholder="Tài khoản"
+        className="w-full bg-zinc-800 rounded-xl p-3 outline-none"
+      />
+
+      <input
+        placeholder="Mật khẩu"
+        type="password"
+        className="w-full bg-zinc-800 rounded-xl p-3 outline-none"
+      />
+    </div>
+
+    <div className="mt-4 text-zinc-400 text-sm text-center">
+      Admin: admin / admin567
+    </div>
+  </div>
+</div>
+
+); }
